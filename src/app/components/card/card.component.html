@@ -1,0 +1,18 @@
+<mat-card>
+    <form [formGroup]="shortenForm" (ngSubmit)="shortenUrl()">
+        <mat-form-field>
+            <mat-label>Enter your long URL</mat-label>
+            <input matinput placeholder="https://example.com" formControlName="longUrl" />
+            @if(shortenForm.get('longUrl')?.hasError('required'))
+            {
+                <mat-error>URL is Required</mat-error>
+            }
+            @if (shortenForm.get('longUrl')?.hasError('pattern')) {
+                <mat-error>Please enter a valid URL</mat-error>
+            }
+        </mat-form-field>
+        <button mat-raised-button color="accent" class="shorten-btn" type="submit">
+            Shorten URL
+        </button>
+    </form>
+</mat-card>

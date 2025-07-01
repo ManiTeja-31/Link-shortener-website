@@ -1,0 +1,26 @@
+
+.shorten-card {
+  width: 100%;
+  max-width: 600px;
+  padding: 30px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  background: #fefefe;
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    .full-width {
+      width: 100%;
+    }
+
+    .shorten-btn {
+      align-self: flex-end;
+      font-weight: bold;
+      padding: 10px 24px;
+      border-radius: 8px;
+    }
+  }
+}
